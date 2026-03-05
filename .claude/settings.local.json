@@ -12,7 +12,10 @@
       "Bash(pnpm --filter=web build)",
       "Bash(git init)",
       "Bash(git remote add origin https://github.com/abhinavdemi/Calma.git)",
-      "Bash(git add .)"
+      "Bash(git add .)",
+      "Bash(git commit:*)",
+      "Bash(git rm --cached apps/web apps/mobile)",
+      "Bash(git add apps/web apps/mobile)"
     ]
   }
 }

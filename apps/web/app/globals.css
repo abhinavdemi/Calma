@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #FDFAF6;
+    --foreground: #2C2118;
+    --card: #F7F2EB;
+    --card-foreground: #2C2118;
+    --popover: #FDFAF6;
+    --popover-foreground: #2C2118;
+    --primary: #8B7355;
+    --primary-foreground: #FDFAF6;
+    --secondary: #EDE5D8;
+    --secondary-foreground: #4A3A29;
+    --muted: #EDE5D8;
+    --muted-foreground: #A8906F;
+    --accent: #A8C5A0;
+    --accent-foreground: #2C2118;
+    --border: #DDD0BE;
+    --input: #EDE5D8;
+    --ring: #A8C5A0;
+    --radius: 0.75rem;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FDFAF6;
+    color: #2C2118;
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    /* Safe area for mobile browsers */
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-lora), Georgia, serif;
+  }
+
+  /* Smooth scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F7F2EB;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #DDD0BE;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C4AE96;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Breathing circle animations */
+  @keyframes breatheIn {
+    from { transform: scale(1); }
+    to { transform: scale(1.5); }
+  }
+
+  @keyframes breatheOut {
+    from { transform: scale(1.5); }
+    to { transform: scale(1); }
+  }
+
+  @keyframes holdBreath {
+    from { transform: scale(var(--breath-scale, 1)); }
+    to { transform: scale(var(--breath-scale, 1)); }
+  }
+
+  /* Soft glow for breathing circle */
+  .breath-glow {
+    box-shadow: 0 0 40px rgba(168, 197, 160, 0.3), 0 0 80px rgba(168, 197, 160, 0.1);
+  }
+
+  /* Message bubble fade in */
+  .message-enter {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Bottom nav safe area */
+  .nav-safe {
+    padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+}
