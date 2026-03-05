@@ -1,0 +1,29 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build outputs
+.next
+dist
+out
+.expo
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Turbo
+.turbo
+
+# Misc
+.DS_Store
+*.pem
+*.log
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts

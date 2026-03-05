@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --version)",
+      "Bash(pnpm --version)",
+      "Bash(npx --version)",
+      "Bash(python3 -c \":*)",
+      "Bash(pnpm install)",
+      "Bash(npm install -g pnpm@9)",
+      "Bash(pnpm --filter=web install)",
+      "Bash(npx create-expo-app@latest apps/mobile --template blank-typescript --yes)",
+      "Bash(pnpm --filter=web build)",
+      "Bash(git init)",
+      "Bash(git remote add origin https://github.com/abhinavdemi/Calma.git)",
+      "Bash(git add .)"
+    ]
+  }
+}

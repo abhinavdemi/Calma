@@ -1,0 +1,21 @@
+# Supabase local dev config (Phase 2)
+# Run: supabase init, supabase start
+
+[project]
+# project_id = "your-project-id-here"
+
+[db]
+port = 54322
+major_version = 15
+
+[studio]
+enabled = true
+port = 54323
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = []
+
+[api]
+port = 54321

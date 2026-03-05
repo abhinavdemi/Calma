@@ -1,0 +1,15 @@
+{
+  "name": "@steady/config",
+  "version": "0.0.1",
+  "private": true,
+  "exports": {
+    "./tailwind": "./tailwind/preset.js",
+    "./typescript/base": "./typescript/base.json",
+    "./typescript/nextjs": "./typescript/nextjs.json",
+    "./typescript/expo": "./typescript/expo.json"
+  },
+  "files": [
+    "tailwind",
+    "typescript"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@steady/shared",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./types/chat": "./types/chat.ts",
+    "./types/community": "./types/community.ts",
+    "./constants/tokens": "./constants/tokens.ts",
+    "./constants/community-data": "./constants/community-data.ts"
+  }
+}
